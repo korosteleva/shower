@@ -10,50 +10,164 @@
 <body class="shower list">
 
 	<header class="caption">
-		<h1>Shower Presentation Engine</h1>
-		<p>Yours Truly, Famous Inc.</p>
+		<h1>Возможности SVG</h1>
+		<p>Коростелева Татьяна, Avito</p>
 	</header>
 
 	<section class="slide" id="cover">
-		<h2>Shower Presentation Engine</h2>
-		<p>Brought to you by <a href="http://pepelsbey.net">Vadim Makeev</a></p>
-		<figure>
-			<img class="cover" src="pictures/cover.jpg" alt="Hands on the orange typewriter in a park">
-			<figcaption class="white">
-				<a href="http://fiftyfootshadows.net/">© John Carey</a>
-			</figcaption>
-		</figure>
+		<h2>Возможности SVG</h2>
+		<p>Avito Frontend Academy</p>
+
+		<div class="cover-images">
+			<svg class="cover-image">
+				<use xlink:href="./assets/index.svg#candy" />
+			</svg>
+			<svg class="cover-image">
+				<use xlink:href="./assets/index.svg#carrot" />
+			</svg>
+			<svg class="cover-image">
+				<use xlink:href="./assets/index.svg#grape" />
+			</svg>
+			<svg class="cover-image">
+				<use xlink:href="./assets/index.svg#candy2" />
+			</svg>
+			<svg class="cover-image">
+				<use xlink:href="./assets/index.svg#icecream" />
+			</svg>
+			<svg class="cover-image">
+				<use xlink:href="./assets/index.svg#martini" />
+			</svg>
+		</div>
+
 		<style>
 			#cover h2 {
-				margin:30px 0 0;
-				color:#FFF;
 				text-align:center;
 				font-size:70px;
 				}
 			#cover p {
-				margin:10px 0 0;
 				text-align:center;
-				color:#FFF;
-				font-style:italic;
-				font-size:20px;
-				}
-				#cover p a {
-					color:#FFF;
-					}
+			}
+			.cover-images {
+				display: flex;
+				justify-content: space-around;
+				position: absolute;
+				bottom: 10%;
+				left: 0;
+				right: 0;
+				width: 100%;
+			}
+			.cover-image {
+				width: 150px;
+				height: 100px;
+			}
 		</style>
 	</section>
 
 	<section class="slide">
-		<h2>Shower key features</h2>
-		<ol>
-			<li>Built on HTML, CSS and vanilla JavaScript</li>
-			<li>Works in all modern browsers</li>
-			<li>Themes are separated from engine</li>
-			<li>Modular and extensible</li>
-			<li>Fully keyboard accessible</li>
-			<li>Printable to PDF</li>
-		</ol>
-		<p class="note">Shower ['ʃəuə] noun. A person or thing that shows.</p>
+		<iframe src="https://korosteleva.github.io/svg-demo/index.html" scrolling="no" width="100%" height="80%"></iframe>
+	</section>
+
+	<section class="slide">
+		<h2>Человекопонятный код</h2>
+		<p>SVG можно создать самому в любимом редакторе</p>
+		<pre>
+				<code>&lt;svg&gt;</code>
+				<code>    &lt;line ... /&gt;</code>
+				<code>&lt;/svg&gt;</code>
+			</pre>
+	</section>
+
+	<section class="slide">
+		<h2>SVG масштабируемы</h2>
+		<div class="svg-retina">
+			<svg width="150" height="250">
+				<use xlink:href="./assets/common.svg#cheese" />
+			</svg>
+			<svg width="300" height="350">
+				<use xlink:href="./assets/common.svg#cheese" />
+			</svg>
+			<svg width="400" height="400">
+				<use xlink:href="./assets/common.svg#cheese" />
+			</svg>
+		</div>
+
+		<style>
+			.svg-retina {
+				display: flex;
+				align-items: flex-start;
+			}
+		</style>
+	</section>
+
+	<section class="slide">
+		<h2>SVG доступны</h2>
+		<div class="svg-accessibility">
+			<pre>
+				<code>&lt;svg&gt;</code>
+				<code>    &lt;title&gt;Кружка чая&lt;/title&gt;</code>
+				<code>    &lt;desc&gt;</code>
+				<code>        Изображена кружка горячего чая</code>
+				<code>    &lt;/desc&gt;</code>
+				<code>    ...</code>
+				<code>&lt;/svg&gt;</code>
+			</pre>
+
+			<svg class="place center right" width="400" height="280">
+				<use xlink:href="./assets/common.svg#tea" />
+			</svg>
+		</div>
+	</section>
+
+	<section class="slide svg-accessibility-text">
+		<h2>SVG доступны</h2>
+		<p>Текст можно выделить, скопировать</p>
+		<svg>
+			<linearGradient id="linear-gradient">
+				<stop offset="0%" stop-color="crimson"/>
+				<stop offset="100%" stop-color="gold"/>
+			</linearGradient>
+
+			<text x="50%" y="60%" text-anchor="middle" class="text" fill="url(#linear-gradient)">SVG</text>
+
+		</svg>
+
+		<style>
+			.svg-accessibility-text svg {
+				width: 100%;
+				height: 14em;
+
+			}
+			.svg-accessibility-text svg .text {
+				font-family: Helvetica;
+				font-size: 10em;
+			}
+		</style>
+	</section>
+
+	<section class="slide">
+		<h2>SVG адаптивны</h2>
+		<div class="demo-link">
+			<a class="link" href="https://korosteleva.github.io/svg-demo/responsive/responsive.html" target="_blank">DEMO</a>
+		</div>
+	</section>
+
+	<section class="slide">
+		<h2>SVG примитивы</h2>
+		<div class="demo-link">
+			<a class="link" href="https://korosteleva.github.io/svg-demo/primitives/primitives.html" target="_blank">DEMO</a>
+		</div>
+
+		<style>
+			.demo-link {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			.demo-link .link {
+				font-size: 5em;
+				background: none;
+			}
+		</style>
 	</section>
 
 	<section class="slide">
@@ -193,7 +307,7 @@
 	</section>
 
 	<footer class="badge">
-		<a href="https://github.com/shower/shower">Fork me on GitHub</a>
+		<a href="https://korosteleva.github.io/svg-demo/">Github</a>
 	</footer>
 
 	<div class="progress"></div>
