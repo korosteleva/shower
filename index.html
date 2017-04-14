@@ -6,6 +6,17 @@
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="./assets/styles/screen-16x10.css">
+	<style>
+		.demo-link {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		.demo-link .link {
+			font-size: 5em;
+			background: none;
+		}
+	</style>
 </head>
 <body class="shower list">
 
@@ -103,18 +114,26 @@
 		<h2>SVG доступны</h2>
 		<div class="svg-accessibility">
 			<pre>
-				<code>&lt;svg&gt;</code>
-				<code>    &lt;title&gt;Кружка чая&lt;/title&gt;</code>
-				<code>    &lt;desc&gt;</code>
+				<code>&lt;svg <mark>aria-labelledby="imgTitle imgDesc" role="img"</mark> &gt;</code>
+				<code>    &lt;title <mark>id="imgTitle"</mark> &gt;Кружка чая&lt;/title&gt;</code>
+				<code>    &lt;desc <mark>id="imgDesc"</mark> &gt;</code>
 				<code>        Изображена кружка горячего чая</code>
 				<code>    &lt;/desc&gt;</code>
 				<code>    ...</code>
 				<code>&lt;/svg&gt;</code>
 			</pre>
 
-			<svg class="place center right" width="400" height="280">
+			<svg class="place bottom right" width="400" height="280" style="bottom: 10%;">
 				<use xlink:href="./assets/common.svg#tea" />
 			</svg>
+		</div>
+	</section>
+
+	<section class="slide">
+		<h2>SVG доступны</h2>
+		<div class="svg-accessibility">
+			<img src="./assets/images/demo-accessibility.png" alt="Изображение Voice Over" style="width: 770px">
+			<p>Прочтение страницы Voice Over</p>
 		</div>
 	</section>
 
@@ -128,7 +147,6 @@
 			</linearGradient>
 
 			<text x="50%" y="60%" text-anchor="middle" class="text" fill="url(#linear-gradient)">SVG</text>
-
 		</svg>
 
 		<style>
@@ -145,10 +163,42 @@
 	</section>
 
 	<section class="slide">
+		<h2>SVG доступны</h2>
+		<div class="demo-link">
+			<a class="link" href="https://korosteleva.github.io/svg-demo/text-path/text-path.html" target="_blank">DEMO</a>
+		</div>
+	</section>
+
+	<section class="slide">
+		<h2>CSS/JS в SVG</h2>
+        <p>Подключение стилей</p>
+        <pre>
+			<code>&lt;svg...&gt;</code>
+			<code>	&lt;style&gt;</code>
+			<code class="mark">		@import url(../common/index.css);</code>
+			<code class="mark">		@import url(page.css);</code>
+			<code>	&lt;/style&gt;</code>
+			<code>	...</code>
+			<code>&lt;/svg&gt;</code>
+		</pre>
+
+	</section>
+
+	<section class="slide">
 		<h2>SVG адаптивны</h2>
 		<div class="demo-link">
 			<a class="link" href="https://korosteleva.github.io/svg-demo/responsive/responsive.html" target="_blank">DEMO</a>
 		</div>
+	</section>
+	<section class="slide">
+		<h2>SVG адаптивны</h2>
+		    <svg width="322" height="112" class="place center center">
+                <use xlink:href="./assets/common.svg#avito" />
+            </svg>
+
+            <div class="place bottom center" style="bottom: 10%">
+                <a href="https://korosteleva.github.io/svg-demo/responsive/responsive-avito.html" target="_blank">DEMO</a>
+            </div>
 	</section>
 
 	<section class="slide">
@@ -156,155 +206,201 @@
 		<div class="demo-link">
 			<a class="link" href="https://korosteleva.github.io/svg-demo/primitives/primitives.html" target="_blank">DEMO</a>
 		</div>
-
-		<style>
-			.demo-link {
-				display: flex;
-				align-items: center;
-				justify-content: center;
-			}
-			.demo-link .link {
-				font-size: 5em;
-				background: none;
-			}
-		</style>
 	</section>
 
 	<section class="slide">
-		<h2>Plain text on your slides</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur <a href="#4">adipisicing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <em>quis nostrud</em> exercitation ullamco laboris <strong>nisi ut aliquip</strong> ex ea commodo consequat. Duis aute irure <i>dolor</i> in reprehenderit in voluptate velit esse cillum <b>dolore</b> eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in <code>&lt;culpa&gt;</code> qui officia deserunt mollit anim id est laborum.</p>
-	</section>
-
-	<section class="slide">
-		<h2>Two columns if you like</h2>
-		<p class="double">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-	</section>
-
-	<section class="slide">
-		<h2>All kind of lists</h2>
-		<ol>
-			<li>Simple lists are marked with bullets</li>
-			<li>Ordered lists begin with a number</li>
-			<li>You can even nest lists one inside another
-				<ul>
-					<li>Or mix their types</li>
-					<li>But do not go too far</li>
-					<li>Otherwise audience will be bored</li>
-				</ul>
-			</li>
-			<li>Look, seven rows exactly!</li>
-		</ol>
-	</section>
-
-	<section class="slide">
-		<h2>Serious citations</h2>
-		<figure>
-			<blockquote>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-			</blockquote>
-			<figcaption>Marcus Tullius Cicero</figcaption>
-		</figure>
-	</section>
-
-	<section class="slide">
-		<h2>Code samples</h2>
+		<h2>Current color</h2>
 		<pre>
-			<code>&lt;!DOCTYPE html&gt;</code>
-			<code class="mark">&lt;html lang="en"&gt;</code>
-			<code><mark>&lt;head&gt;</mark> <span class="comment">&lt;!--Comment--&gt;</span></code>
-			<code>    &lt;title&gt;Shower&lt;/title&gt;</code>
-			<code>    &lt;meta charset="<mark class="important">UTF-8</mark>"&gt;</code>
-			<code>    &lt;link rel="stylesheet" href="screen.css"&gt;</code>
-			<code><mark>&lt;/head&gt;</mark></code>
+			<code>&lt;ul class="menu"&gt;</code>
+			<code>	&lt;li class="<mark>menu-item</mark>"&gt;</code>
+			<code>		&lt;svg class="<mark>menu-item-icon</mark>">...&lt;/svg&gt;</code>
+			<code>		&lt;label class="menu-item-label">Title&lt;/label&gt;</code>
+			<code>	&lt;/li&gt;</code>
+			<code>	...</code>
+			<code>&lt;/ul&gt;</code>
 		</pre>
 	</section>
 
 	<section class="slide">
-		<h2>Even tables</h2>
-		<table>
-		<tr>
-			<th scope="col">Locavore</th>
-			<th>Umami</th>
-			<th>Helvetica</th>
-			<th>Vegan</th>
-		</tr>
-		<tr>
-			<th scope="row">Fingerstache</th>
-			<td>Kale</td>
-			<td>Chips</td>
-			<td>Keytar</td>
-		</tr>
-		<tr>
-			<th scope="row">Sriracha</th>
-			<td>Gluten-free</td>
-			<td>Ennui</td>
-			<td>Keffiyeh</td>
-		</tr>
-		<tr>
-			<th scope="row">Thundercats</th>
-			<td>Jean</td>
-			<td>Shorts</td>
-			<td>Biodiesel</td>
-		</tr>
-		<tr>
-			<th scope="row">Terry</th>
-			<td>Richardson</td>
-			<td>Swag</td>
-			<td>Blog</td>
-		</tr>
-		</table>
-		<p>It’s good to have information organized.</p>
-	</section>
-
-	<section class="slide" id="picture">
-		<h2>Pictures</h2>
-		<figure>
-			<img class="cover" src="pictures/picture.jpg" alt="Orange typewriter on a wooden table close-up">
-			<figcaption class="white">
-				<a href="http://fiftyfootshadows.net/">© John Carey</a>
-			</figcaption>
-		</figure>
-		<style>
-			#picture h2 {
-				color:#FFF;
-				}
-		</style>
+		<h2>Current color</h2>
+		<p>SVG в разметке html</p>
+		<pre>
+			<code>&lt;svg class="menu-item-icon"&gt;</code>
+			<code>	&lt;use <mark>xlink:href="fruits.svg#apple"</mark> /&gt;</code>
+			<code>&lt;/svg&gt;</code>
+		</pre>
 	</section>
 
 	<section class="slide">
-		<h2 class="shout shrink">You can even shout this way</h2>
+		<h2>Current color</h2>
+		<p>SVG разметка внутри <mark>fruits.svg</mark></p>
+
+		<pre>
+			<code>&lt;svg xmlns="http://www.w3.org/2000/svg"&gt;</code>
+			<code>	&lt;<mark>symbol id="apple"</mark> viewBox="0 0 100 100"/&gt;</code>
+			<code>		&lt;path d="....." /&gt;</code>
+			<code>	&lt;/symbol&gt;</code>
+			<code>&lt;/svg&gt;</code>
+		</pre>
 	</section>
 
 	<section class="slide">
-		<h2>Inner navigation</h2>
-		<ol>
-			<li>Lets you reveal list items one by one</li>
-			<li class="next">To keep some key points</li>
-			<li class="next">In secret from audience</li>
-			<li class="next">But it will work only once</li>
-			<li class="next">Nobody wants to see the same joke twice</li>
-		</ol>
+		<h2>Current color</h2>
+		<pre>
+			<code>.menu-item-icon {</code>
+			<code class="mark">	fill: currentColor;</code>
+			<code class="mark">	stroke: currentColor;</code>
+			<code>	transition: all 0.3s;</code>
+			<code>}</code>
+			<code></code>
+			<code>.menu-item { color: yellowgreen }</code>
+			<code>.menu-item:hover { color: crimson }</code>
+		</pre>
 	</section>
 
-	<section class="slide grid">
-		<h2>All nicely aligned to grid</h2>
+	<section class="slide">
+		<h2>Current color</h2>
+		<div class="demo-link">
+			<a class="link" href="https://korosteleva.github.io/svg-demo/current-color/current-color.html" target="_blank">DEMO</a>
+		</div>
 	</section>
 
-	<section class="slide" id="see-more">
-		<h2 class="shout">
-			<img src="pictures/logo.svg" alt="Shower logo">
-			<a href="https://github.com/shower/shower">See more on GitHub</a>
-		</h2>
-		<style>
-			#see-more h2 {
-				font-size:100px
-				}
-			#see-more img {
-				width:0.72em;
-				height:0.72em;
-				}
-		</style>
+	<section class="slide">
+		<h2>Полезные ссылки</h2>
+		<ul>
+			<li>
+				<a href="https://css-tricks.com/accessible-svgs/" target="_blank" rel="noopener">Доступные SVG</a>
+			</li>
+			<li>
+				<a href="https://thenounproject.com/" target="_blank" rel="noopener">Коллекции SVG на все случаи</a>
+			</li>
+		</ul>
 	</section>
+
+	<!--<section class="slide">-->
+		<!--<h2>Plain text on your slides</h2>-->
+		<!--<p>Lorem ipsum dolor sit amet, consectetur <a href="#4">adipisicing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <em>quis nostrud</em> exercitation ullamco laboris <strong>nisi ut aliquip</strong> ex ea commodo consequat. Duis aute irure <i>dolor</i> in reprehenderit in voluptate velit esse cillum <b>dolore</b> eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in <code>&lt;culpa&gt;</code> qui officia deserunt mollit anim id est laborum.</p>-->
+	<!--</section>-->
+
+	<!--<section class="slide">-->
+		<!--<h2>Two columns if you like</h2>-->
+		<!--<p class="double">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>-->
+	<!--</section>-->
+
+	<!--<section class="slide">-->
+		<!--<h2>All kind of lists</h2>-->
+		<!--<ol>-->
+			<!--<li>Simple lists are marked with bullets</li>-->
+			<!--<li>Ordered lists begin with a number</li>-->
+			<!--<li>You can even nest lists one inside another-->
+				<!--<ul>-->
+					<!--<li>Or mix their types</li>-->
+					<!--<li>But do not go too far</li>-->
+					<!--<li>Otherwise audience will be bored</li>-->
+				<!--</ul>-->
+			<!--</li>-->
+			<!--<li>Look, seven rows exactly!</li>-->
+		<!--</ol>-->
+	<!--</section>-->
+
+	<!--<section class="slide">-->
+		<!--<h2>Serious citations</h2>-->
+		<!--<figure>-->
+			<!--<blockquote>-->
+				<!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>-->
+			<!--</blockquote>-->
+			<!--<figcaption>Marcus Tullius Cicero</figcaption>-->
+		<!--</figure>-->
+	<!--</section>-->
+
+	<!--<section class="slide">-->
+		<!--<h2>Code samples</h2>-->
+		<!--<pre>-->
+			<!--<code>&lt;!DOCTYPE html&gt;</code>-->
+			<!--<code class="mark">&lt;html lang="en"&gt;</code>-->
+			<!--<code><mark>&lt;head&gt;</mark> <span class="comment">&lt;!&#45;&#45;Comment&#45;&#45;&gt;</span></code>-->
+			<!--<code>    &lt;title&gt;Shower&lt;/title&gt;</code>-->
+			<!--<code>    &lt;meta charset="<mark class="important">UTF-8</mark>"&gt;</code>-->
+			<!--<code>    &lt;link rel="stylesheet" href="screen.css"&gt;</code>-->
+			<!--<code><mark>&lt;/head&gt;</mark></code>-->
+		<!--</pre>-->
+	<!--</section>-->
+
+	<!--<section class="slide">-->
+		<!--<h2>Even tables</h2>-->
+		<!--<table>-->
+		<!--<tr>-->
+			<!--<th scope="col">Locavore</th>-->
+			<!--<th>Umami</th>-->
+			<!--<th>Helvetica</th>-->
+			<!--<th>Vegan</th>-->
+		<!--</tr>-->
+		<!--<tr>-->
+			<!--<th scope="row">Fingerstache</th>-->
+			<!--<td>Kale</td>-->
+			<!--<td>Chips</td>-->
+			<!--<td>Keytar</td>-->
+		<!--</tr>-->
+		<!--<tr>-->
+			<!--<th scope="row">Sriracha</th>-->
+			<!--<td>Gluten-free</td>-->
+			<!--<td>Ennui</td>-->
+			<!--<td>Keffiyeh</td>-->
+		<!--</tr>-->
+		<!--<tr>-->
+			<!--<th scope="row">Thundercats</th>-->
+			<!--<td>Jean</td>-->
+			<!--<td>Shorts</td>-->
+			<!--<td>Biodiesel</td>-->
+		<!--</tr>-->
+		<!--<tr>-->
+			<!--<th scope="row">Terry</th>-->
+			<!--<td>Richardson</td>-->
+			<!--<td>Swag</td>-->
+			<!--<td>Blog</td>-->
+		<!--</tr>-->
+		<!--</table>-->
+		<!--<p>It’s good to have information organized.</p>-->
+	<!--</section>-->
+
+	<!--<section class="slide" id="picture">-->
+		<!--<h2>Pictures</h2>-->
+		<!--<figure>-->
+			<!--<img class="cover" src="pictures/picture.jpg" alt="Orange typewriter on a wooden table close-up">-->
+			<!--<figcaption class="white">-->
+				<!--<a href="http://fiftyfootshadows.net/">© John Carey</a>-->
+			<!--</figcaption>-->
+		<!--</figure>-->
+		<!--<style>-->
+			<!--#picture h2 {-->
+				<!--color:#FFF;-->
+				<!--}-->
+		<!--</style>-->
+	<!--</section>-->
+
+	<!--<section class="slide">-->
+		<!--<h2 class="shout shrink">You can even shout this way</h2>-->
+	<!--</section>-->
+
+	<!--<section class="slide grid">-->
+		<!--<h2>All nicely aligned to grid</h2>-->
+	<!--</section>-->
+
+	<!--<section class="slide" id="see-more">-->
+		<!--<h2 class="shout">-->
+			<!--<img src="pictures/logo.svg" alt="Shower logo">-->
+			<!--<a href="https://github.com/shower/shower">See more on GitHub</a>-->
+		<!--</h2>-->
+		<!--<style>-->
+			<!--#see-more h2 {-->
+				<!--font-size:100px-->
+				<!--}-->
+			<!--#see-more img {-->
+				<!--width:0.72em;-->
+				<!--height:0.72em;-->
+				<!--}-->
+		<!--</style>-->
+	<!--</section>-->
 
 	<footer class="badge">
 		<a href="https://korosteleva.github.io/svg-demo/">Github</a>
