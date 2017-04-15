@@ -195,10 +195,14 @@
 		    <svg width="322" height="112" class="place center center">
                 <use xlink:href="./assets/common.svg#avito" />
             </svg>
-
             <div class="place bottom center" style="bottom: 10%">
                 <a href="https://korosteleva.github.io/svg-demo/responsive/responsive-avito.html" target="_blank">DEMO</a>
             </div>
+	</section>
+
+	<section class="slide">
+		<h2>Поддержка svg</h2>
+		<img style="width: 770px;" src="./assets/images/caniuse.png" >
 	</section>
 
 	<section class="slide">
@@ -206,13 +210,10 @@
 
 		<div class="cover-images">
 			<svg class="cover-image">
-				<use xlink:href="./assets/common.svg#sad" />
-			</svg>
-			<svg class="cover-image">
 				<use xlink:href="./assets/common.svg#sad-girl" />
 			</svg>
 			<svg class="cover-image">
-				<use xlink:href="./assets/common.svg#sad2" />
+				<use xlink:href="./assets/common.svg#sad" />
 			</svg>
 		</div>
 	</section>
@@ -244,26 +245,141 @@
 	</section>
 
 	<section class="slide">
-		<h2>SVG примитивы</h2>
-		<div class="demo-link">
-			<a class="link" href="https://korosteleva.github.io/svg-demo/primitives/primitives.html" target="_blank">DEMO</a>
+		<h2>SVG vs Icon Fonts</h2>
+		<div class="demo-link" style="height: 40vh">
+			<a href="https://www.youtube.com/watch?v=9xXBYcWgCHA" target="_blank" rel="noopener">Seren Davies: Death to icon fonts - EpicFEL 2015</a>
 		</div>
 	</section>
 
 	<section class="slide">
+		<h2>SVG примитивы</h2>
+		<div class="demo-link">
+			<a class="link" href="https://korosteleva.github.io/svg-demo/primitives/primitives.html" target="_blank">DEMO</a>
+		</div>
+		// todo про текст, линии, концы линий
+	</section>
+
+	<section class="slide">
 		<h2>viewbox + ширина & высота = magic</h2>
+		// todo
 	</section>
 
 	<section class="slide">
-		<h2>как добавить svg и уже начать их использовать?</h2>
+		<h2>Как использовать SVG уже сейчас?</h2>
+		<p>Существуют несколько способ добавить svg на сайт.</p>
+
+		<div class="cover-images">
+			<svg class="cover-image">
+				<use xlink:href="./assets/common.svg#happy" />
+			</svg>
+			<svg class="cover-image">
+				<use xlink:href="./assets/common.svg#surprise" />
+			</svg>
+		</div>
 	</section>
 
 	<section class="slide">
-		<h2>Поддержка svg</h2>
+		<h2>Как использовать SVG уже сейчас?</h2>
+		<p>Обычная картинка</p>
+		<pre>
+			<code>&lt;div&gt;</code>
+			<code class="mark">	&lt;img src="apple.svg" alt="Изображение яблока" /&gt;</code>
+			<code>&lt;/div&gt;</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Как использовать SVG уже сейчас?</h2>
+		<p>Inline svg</p>
+		<pre>
+			<code>&lt;div&gt;</code>
+			<code class="mark">	&lt;svg ... &gt;</code>
+			<code class="mark">		&lt;line .... /&gt;</code>
+			<code class="mark">	&lt;/svg&gt;</code>
+			<code>&lt;/div&gt;</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Как использовать SVG уже сейчас?</h2>
+		<p>Embed, object, iframe</p>
+		<pre>
+			<code>&lt;div&gt;</code>
+			<code class="mark">	&lt;iframe src="apple.svg" ... &gt; &lt;/iframe&gt;</code>
+			<code>&lt;/div&gt;</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Как использовать SVG уже сейчас?</h2>
+		<p>SVG шрифты (спрайты)</p>
+		<pre>
+			<code>&lt;svg&gt;</code>
+			<code>	&lt;defs&gt;</code>
+			<code>		&lt;symbol <mark>id="pinapple"</mark>&gt;&lt;line .../&gt;&lt;/symbol&gt;</code>
+			<code>		&lt;symbol <mark>id="grape"</mark>&gt;&lt;line .../&gt;&lt;/symbol&gt;</code>
+			<code>		&lt;symbol <mark>id="orange"</mark>&gt;&lt;line .../&gt;&lt;/symbol&gt;</code>
+			<code>	&lt;/defs&gt;</code>
+			<code>&lt;/svg&gt;</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Как использовать SVG уже сейчас?</h2>
+		<p>SVG шрифты (спрайты)</p>
+		<pre>
+			<code>&lt;div&gt;</code>
+			<code>	&lt;svg&gt;</code>
+			<code>		&lt;use <mark>xlink:href="fruits.svg#pinapple"</mark> /&gt;</code>
+			<code>	&lt;/svg&gt;</code>
+			<code>&lt;/div&gt;</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Как использовать SVG уже сейчас?</h2>
+		<p>SVG шрифты (спрайты)</p>
+		<div class="demo-link" style="height: 30vh">
+			<a href="https://icomoon.io/" rel="noopener" target="_blank">icomoon.io</a>
+		</div>
+	</section>
+
+	<section class="slide">
+		<h2>Как использовать SVG уже сейчас?</h2>
+		<p>SVG как свойство <code>background-image</code></p>
+		<p>Также <code>base64</code>, <code>data-url</code></p>
+		<pre>
+			<code>.element {</code>
+			<code class="mark">	background: url(apple.svg);</code>
+			<code>}</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Оптимизация SVG</h2>
+		<p>Выигрыш в размере может быть до 90%</p>
+		<div class="demo-link" style="height: 30vh">
+			<a href="https://jakearchibald.github.io/svgomg/" target="_blank" rel="noopener">SVGOMG</a>
+		</div>
+	</section>
+
+	<section class="slide">
+		<h2>Оптимизация SVG</h2>
+		<div>Настройка gzip на сервере
+			(<a href="https://css-tricks.com/snippets/htaccess/active-gzip-compression/" target="_blank" rel="noopener">css-tricks</a>)
+		</div>
+		<pre>
+			<code>htaccess</code>
+			<code class="mark">	addType image/svg+html .svg .svhg</code>
+			<code>&lt;ifmodule mod_deflate.c></code>
+			<code class="mark">	AddOutputFilterByType DEFLATE text/html image/svg+xml</code>
+			<code>&lt;/ifmodule></code>
+		</pre>
 	</section>
 
 	<section class="slide">
 		<h2>SVG градиенты</h2>
+		// todo
 		<div class="demo-link">
 			<a class="link" href="https://korosteleva.github.io/svg-demo/gradient/gradient.html" target="_blank">DEMO</a>
 		</div>
@@ -271,24 +387,18 @@
 
 	<section class="slide">
 		<h2>SVG трансформации</h2>
+		// todo
 	</section>
 
 	<section class="slide">
 		<h2>SVG маски</h2>
+		// todo
 	</section>
 
 	<section class="slide">
 		<h2>SVG в рассылках!</h2>
+		// todo
 	</section>
-
-
-
-
-
-
-
-
-
 
 	<section class="slide">
 		<h2>currentColor</h2>
@@ -421,20 +531,28 @@
 
 	<section class="slide">
 		<h2>Что еще о SVG?</h2>
-		<ul class="double">
+		<ul>
 			<li>
-				Интерактивные карты, графики
+				Готовые библиотеки для работы с svg: <br/>
+				<a href="http://snapsvg.io/" target="_blank" rel="noopener">snapsvg</a>,
+				<a href="http://velocityjs.org/#svg" target="_blank" rel="noopener">velocity js</a>,
+				<a href="http://svgjs.com/" target="_blank" rel="noopener">svg js</a>,
+				<a href="https://d3js.org/" target="_blank" rel="noopener">d3 js</a>
+			</li>
+			<li>
+				Интерактивные графики: <a href="https://css-tricks.com/how-to-make-charts-with-svg/" target="_blank" rel="noopener">css-tricks</a>
 			</li>
 			<li>
 				Игры
 			</li>
 			<li>
-				SMIL анимации
-			</li>
-			<li>
 				...
 			</li>
-		</ul>
+		</ul><div class="cover-images">
+		<svg class="cover-image">
+			<use xlink:href="./assets/common.svg#nerd-girl" />
+		</svg>
+	</div>
 	</section>
 
 	<section class="slide">
@@ -456,7 +574,19 @@
 				<a href="https://css-tricks.com/currentcolor/" target="_blank" rel="noopener">currentColor</a>
 			</li>
 			<li>
-				<a href="https://www.youtube.com/watch?v=2an6-WVPuJU" target="_blank" rel="noopener">Lea Verou, CSS Variables</a>
+				<a href="https://www.youtube.com/watch?v=2an6-WVPuJU" target="_blank" rel="noopener">Lea Verou: CSS Variables</a>
+			</li>
+			<li>
+				<a href="https://www.youtube.com/watch?v=9xXBYcWgCHA" target="_blank" rel="noopener">Seren Davies: Death to icon fonts</a>
+			</li>
+			<li>
+				<a href="https://speakerdeck.com/chriscoyier/the-wonderful-world-of-svg" target="_blank" rel="noopener">Chris Coyier: The wonderful world of svg</a>
+			</li>
+			<li>
+				<a href="https://icomoon.io/" target="_blank" rel="noopener">Генератор svg шрифтов</a>
+			</li>
+			<li>
+				<a href="https://css-tricks.com/mega-list-svg-information/" target="_blank" rel="noopener">Css tricks: mega list svg</a>
 			</li>
 		</ul>
 	</section>
