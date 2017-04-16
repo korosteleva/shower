@@ -637,11 +637,6 @@
 	</section>
 
 	<section class="slide">
-		<h2>SVG маски</h2>
-		// todo
-	</section>
-
-	<section class="slide">
 		<h2>SVG в рассылках</h2>
 		<div style="text-align: center;padding-top: 50px;">
 			<img src="./assets/images/svg-in-email.gif"/>
@@ -680,40 +675,64 @@
 
 	<section class="slide">
 		<h2>SVG в рассылках</h2>
-		// todo
-		<p>Поддержка браузерами</p>
 		<table>
 			<tr>
-				<th scope="col">Locavore</th>
-				<th>Umami</th>
-				<th>Helvetica</th>
-				<th>Vegan</th>
+				<th scope="col">SVG</th>
+				<th>Поддержка браузерами *</th>
 			</tr>
 			<tr>
-				<th scope="row">Fingerstache</th>
-				<td>Kale</td>
-				<td>Chips</td>
-				<td>Keytar</td>
+				<th scope="row">SVG as Image Tag</th>
+				<td>60%</td>
 			</tr>
 			<tr>
-				<th scope="row">Sriracha</th>
-				<td>Gluten-free</td>
-				<td>Ennui</td>
-				<td>Keffiyeh</td>
+				<th scope="row">SVG as Inline HTML</th>
+				<td>25%</td>
 			</tr>
 			<tr>
-				<th scope="row">Thundercats</th>
-				<td>Jean</td>
-				<td>Shorts</td>
-				<td>Biodiesel</td>
+				<th scope="row">SVG as CSS background Image</th>
+				<td>40%</td>
 			</tr>
 			<tr>
-				<th scope="row">Terry</th>
-				<td>Richardson</td>
-				<td>Swag</td>
-				<td>Blog</td>
+				<th scope="row">SVG as Object Embed</th>
+				<td>55%</td>
 			</tr>
 		</table>
+		<p>Браузеры: AOL Web, Outlook 2013, Outlook.com, Yahoo!, Mail (OSX), Mail (iOS), Gmail, Gmail (iOS), Gmail (Android)</p>
+	</section>
+
+
+	<section class="slide">
+		<pre>
+			<code>&lt;div <mark>class="no-webkit"</mark>></code>
+			<code>	&lt;img src="path/to/fallback/image"&gt;</code>
+			<code>&lt;/div&gt;</code>
+			<code class="comment mark">&lt;!--[if !mso 9]><--></code>
+			<code>&lt;div <mark>class="is-webkit"</mark> style="display: none; max-height: 0"></code>
+			<code>	&lt;img src="path/to/logo.svg"&gt;</code>
+			<code>&lt;/div&gt;</code>
+			<code class="comment">&lt;!--&lt;![endif]--></code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<pre>
+			<code>@media all and <mark>(-webkit-min-device-pixel-ratio:1)</mark> {</code>
+			<code class="mark">	.is-webkit {</code>
+			<code>		display: block !important;</code>
+			<code>		max-height: none !important;</code>
+			<code>	}</code>
+			<code class="mark">	.no-webkit {</code>
+			<code>		display: none !important;</code>
+			<code>	}</code>
+			<code>}</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>SVG в рассылках</h2>
+		<div class="demo-link" style="height: 40vh">
+			<a href="https://css-tricks.com/a-guide-on-svg-support-in-email/" target="_blank" rel="noopener">Гид по SVG в рассылках</a>
+		</div>
 	</section>
 
 	<section class="slide">
@@ -860,10 +879,31 @@
 	</section>
 
 	<section class="slide">
-		<h2>Проблемы svg</h2>
-		<ul>
-			<li>События мыши по <code>hover</code> или </li>
-		</ul>
+		<p data-height="405" data-theme-id="0" data-slug-hash="KwJmjj" data-default-tab="result" data-user="marknelson" data-embed-version="2" data-pen-title="SVG Sprite Animation" class="codepen">See the Pen <a href="http://codepen.io/marknelson/pen/KwJmjj/">SVG Sprite Animation</a> by Mark Nelson (<a href="http://codepen.io/marknelson">@marknelson</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+	</section>
+
+	<section class="slide">
+		<p data-height="308" data-theme-id="0" data-slug-hash="YqNqXa" data-default-tab="result" data-user="poorvanj" data-embed-version="2" data-pen-title="SVG Path Animation" class="codepen">See the Pen <a href="http://codepen.io/poorvanj/pen/YqNqXa/">SVG Path Animation</a> by Poorva Janbandhu (<a href="http://codepen.io/poorvanj">@poorvanj</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+	</section>
+
+	<section class="slide">
+		<p data-height="271" data-theme-id="0" data-slug-hash="ArFvk" data-default-tab="result" data-user="DirkWeber" data-embed-version="2" data-pen-title="SVG Glitch" class="codepen">See the Pen <a href="http://codepen.io/DirkWeber/pen/ArFvk/">SVG Glitch</a> by Dirk Weber (<a href="http://codepen.io/DirkWeber">@DirkWeber</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+	</section>
+
+	<section class="slide">
+		<p data-height="328" data-theme-id="0" data-slug-hash="Alayb" data-default-tab="result" data-user="kyleHenwood" data-embed-version="2" data-pen-title="SVG CSS3 Menu / Burger Button" class="codepen">See the Pen <a href="http://codepen.io/kyleHenwood/pen/Alayb/">SVG CSS3 Menu / Burger Button</a> by Kyle Henwood (<a href="http://codepen.io/kyleHenwood">@kyleHenwood</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+	</section>
+
+	<section class="slide">
+		<p data-height="422" data-theme-id="0" data-slug-hash="KVdQqm" data-default-tab="result" data-user="iamjoshellis" data-embed-version="2" data-pen-title="SVG Animated Drum Kit (Play Me!) 🥁" class="codepen">See the Pen <a href="http://codepen.io/iamjoshellis/pen/KVdQqm/">SVG Animated Drum Kit (Play Me!) 🥁</a> by Josh (<a href="http://codepen.io/iamjoshellis">@iamjoshellis</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+	</section>
+
+	<section class="slide">
+		<p data-height="473" data-theme-id="0" data-slug-hash="ByxQjL" data-default-tab="result" data-user="noeldelgado" data-embed-version="2" data-pen-title="X-ray me (SVG Experiment)" class="codepen">See the Pen <a href="http://codepen.io/noeldelgado/pen/ByxQjL/">X-ray me (SVG Experiment)</a> by Noel Delgado (<a href="http://codepen.io/noeldelgado">@noeldelgado</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+	</section>
+
+	<section class="slide">
+		<p data-height="466" data-theme-id="0" data-slug-hash="dPqRmP" data-default-tab="result" data-user="sdras" data-embed-version="2" data-pen-title="When you're an introvert..." class="codepen">See the Pen <a href="http://codepen.io/sdras/pen/dPqRmP/">When you're an introvert...</a> by Sarah Drasner (<a href="http://codepen.io/sdras">@sdras</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 	</section>
 
 	<section class="slide">
@@ -964,6 +1004,6 @@
 
 	<script src="./assets/shower.min.js"></script>
 	<!-- Copyright © 2017 Yours Truly, Famous Inc. -->
-
+	<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </body>
 </html>
