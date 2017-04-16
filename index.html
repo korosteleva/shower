@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Shower Presentation Engine</title>
+	<title>Возможности SVG</title>
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -77,6 +77,19 @@
 
 	<section class="slide">
 		<iframe src="https://korosteleva.github.io/svg-demo/index.html" scrolling="no" width="100%" height="80%"></iframe>
+	</section>
+
+	<section class="slide">
+		<h2 style="text-align: center;">Основные свойства SVG</h2>
+
+		<div class="cover-images">
+			<svg class="cover-image">
+				<use xlink:href="./assets/common.svg#happy" />
+			</svg>
+			<svg class="cover-image">
+				<use xlink:href="./assets/common.svg#surprise" />
+			</svg>
+		</div>
 	</section>
 
 	<section class="slide">
@@ -201,7 +214,7 @@
 	</section>
 
 	<section class="slide">
-		<h2>Поддержка svg</h2>
+		<h2>SVG широко поддерживаемы</h2>
 		<img style="width: 770px;" src="./assets/images/caniuse.png" >
 	</section>
 
@@ -216,11 +229,6 @@
 				<use xlink:href="./assets/common.svg#sad" />
 			</svg>
 		</div>
-	</section>
-
-	<section class="slide">
-		<h2>SVG vs JPG/PNG</h2>
-		<img src="./assets/images/jpeg.png" class="place bottom center" style="width: 600px; bottom: 10%;">
 	</section>
 
 	<section class="slide">
@@ -252,16 +260,62 @@
 	</section>
 
 	<section class="slide">
-		<h2>SVG примитивы</h2>
-		<div class="demo-link">
-			<a class="link" href="https://korosteleva.github.io/svg-demo/primitives/primitives.html" target="_blank">DEMO</a>
-		</div>
-		// todo про текст, линии, концы линий
+		<h2>SVG vs JPG/PNG</h2>
+		<ul>
+			<li>Изображения не гибкие - нельзя применить стилизацию;</li>
+			<li>Для современных экраном следует вырезать @2x, @3x и тд картинки;</li>
+			<li>Выбор между хорошим отображением на экране и небольшим весом файла.</li>
+		</ul>
 	</section>
 
 	<section class="slide">
-		<h2>viewbox + ширина & высота = magic</h2>
-		// todo
+		<h2 style="display: none;">SVG vs JPG/PNG</h2>
+		<img src="./assets/images/svg_vs_png.png" class="place center center" style="width: 500px;">
+	</section>
+
+	<section class="slide">
+		<h2>SVG vs JPG/PNG</h2>
+		<figure>
+			<blockquote>
+				<p>Золотое правило - четко понимать, когда нужно использовать SVG, а когда лучше использовать растровое изображение.</p>
+			</blockquote>
+		</figure>
+		<div class="cover-images">
+			<svg class="cover-image">
+				<use xlink:href="./assets/common.svg#strawberry" />
+			</svg>
+			<svg class="cover-image">
+				<use xlink:href="./assets/common.svg#strawberry" />
+			</svg>
+			<svg class="cover-image">
+				<use xlink:href="./assets/common.svg#strawberry" />
+			</svg>
+			<svg class="cover-image">
+				<use xlink:href="./assets/common.svg#strawberry" />
+			</svg>
+			<svg class="cover-image">
+				<use xlink:href="./assets/common.svg#strawberry" />
+			</svg>
+		</div>
+	</section>
+
+	<section class="slide">
+		<h2 style="display: none;">SVG vs JPG/PNG</h2>
+		<div style="display: flex;">
+			<div style="width: 50%;">
+				<p>Mayyyybe SVG</p>
+				<div>
+					<img src="./assets/images/strawberry-cartun.jpg">
+				</div>
+				<p>Нужно сравнивать gzip размеры файла SVG и растра</p>
+			</div>
+			<div style="width: 50%;">
+				<p>Not SVG</p>
+				<div>
+					<img src="./assets/images/strawberry-img.jpg" style="max-width: 100%;">
+				</div>
+			</div>
+		</div>
 	</section>
 
 	<section class="slide">
@@ -378,16 +432,208 @@
 	</section>
 
 	<section class="slide">
-		<h2>SVG градиенты</h2>
-		// todo
+		<h2>Фигуры SVG</h2>
 		<div class="demo-link">
-			<a class="link" href="https://korosteleva.github.io/svg-demo/gradient/gradient.html" target="_blank">DEMO</a>
+			<a class="link" href="https://korosteleva.github.io/svg-demo/primitives/primitives.html" target="_blank">DEMO</a>
 		</div>
 	</section>
 
 	<section class="slide">
-		<h2>SVG трансформации</h2>
-		// todo
+		<h2>Фигуры SVG &mdash; lines</h2>
+
+		<div class="demo-link">
+			<a class="link" href="https://korosteleva.github.io/svg-demo/primitives/stroke-linescape.html" target="_blank">DEMO</a>
+		</div>
+	</section>
+
+	<section class="slide">
+		<h2>Фигуры SVG &mdash; dashing</h2>
+
+		<div class="demo-link">
+			<a class="link" href="https://korosteleva.github.io/svg-demo/primitives/dashing.html" target="_blank">DEMO</a>
+		</div>
+	</section>
+
+	<section class="slide">
+		<h2>Фигуры SVG &mdash; corners</h2>
+
+		<div class="demo-link">
+			<a class="link" href="https://korosteleva.github.io/svg-demo/primitives/corners.html" target="_blank">DEMO</a>
+		</div>
+	</section>
+
+	<section class="slide">
+		<h2>Системы координат SVG</h2>
+		<div style="text-align: center; padding-top: 10vh;">
+			<svg>
+				<use xlink:href="./assets/common.svg#magic" />
+			</svg>
+		</div>
+	</section>
+
+	<section class="slide">
+		<h2>The SVG Canvas</h2>
+		<p>Это пространство или область, в которой отображается содержимое SVG. Канвас бесконечен в обоих измерениях. Следовательно, SVG может быть любого размера.</p>
+		<p>SVG отображается на экране относительно конечной области, известной как <code>viewport</code>.
+			Области SVG, которые лежат за пределами <code>viewport</code>, отсекаются и не видны.</p>
+	</section>
+
+	<section class="slide">
+		<h2>The viewport</h2>
+		<p>Это область просмотра, где содержимое SVG будет видно. Устанавливается атрибутами <code>width</code> и <code>height</code></p>
+		<pre>
+			<code class="comment">&lt!-- viewport 100px x 100px --&gt;</code>
+			<code>&lt;svg <mark>width="100"</mark> <mark>height="100"</mark>&gt;...&lt;/svg&gt;</code>
+		</pre>
+		<i>
+			Можно задать размер в любых единицах (em, px, pt, cm, percentages, ...)
+		</i>
+	</section>
+
+	<section class="slide">
+		<h2>The viewport</h2>
+		<figure>
+			<blockquote>
+				<p>Можно провести аналогию с окном браузера &mdash; Веб-страница может быть любого размера; страница может быть шире окна браузера и в большинстве случаев длиннее. Но только часть веб-страницы видна в браузере в каждый момент времени.</p>
+			</blockquote>
+		</figure>
+	</section>
+
+	<section class="slide">
+		<h2>The viewport</h2>
+		<p>Как только задан <code>viewport</code>, браузер устанавливает <mark>initial viewport coordinate system</mark> и <mark>initial user coordinate system</mark></p>
+	</section>
+
+	<section class="slide">
+		<h2>The initial coordinate system</h2>
+		<p>
+			<code>The initial viewport coordinate system</code> &mdash; это система координат, установленная для <code>viewport</code>, с началом в левом верхнем углу окна просмотра в точке (0, 0). Ось x направлена вправо, Ось y направлена вниз. Один элемент в исходной системе координат равен одному пикселю в окне просмотра.
+		</p>
+	</section>
+
+
+	<section class="slide">
+		<h2>The initial coordinate system</h2>
+		<p>
+			<code>The initial user coordinate system</code> &mdash; это система координат, установленная на канвасе SVG. Эта система координат изначально идентична системе координат вьюпорта - она ​​имеет начало в верхнем левом углу области просмотра.
+			Атрибут <code>viewBox</code> изменяет исходную систему координат.
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>The viewBox</h2>
+		<p>
+			<code>viewBox</code> &mdash; это «реальная» система координат, используемая для рисования SVG-графики на холсте.
+			Эта система координат может быть меньше или больше, чем <code>viewport</code>.
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>The viewBox</h2>
+		<pre>
+			<code>&lt;svg <mark>viewBox="min-x min-y width height"</mark>></code>
+			<code>	...</code>
+			<code>&lt;/svg&gt;</code>
+		</pre>
+		<p>
+			<code>min-x</code>, <code>min-y</code> &mdash; задают верхний левый угол<br>
+			<code>width</code>, <code>height</code> &mdash; задают ширину и высоту области
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>The viewBox</h2>
+
+		<p>В данном примере viewBox равен viewport, но они могут не совпадать</p>
+		<pre>
+			<code>&lt;svg width="100" height="100" <mark>viewBox="0 0 100 100"</mark>></code>
+			<code>	...</code>
+			<code>&lt;/svg&gt;</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>The viewBox</h2>
+		<p>Когда <code>viewBox</code> и <code>viewport</code> не совпадают, SVG должно масштабироваться с учетом коэффициента, показывающего разницу этих атрибутов &mdash; <code>unit</code>.</p>
+		<mark>1 unit width = viewport-width / viewBox-width</mark><br>
+		<mark>1 unit height = viewport-height / viewBox-height</mark>
+	</section>
+
+	<section class="slide">
+		<h2>The viewBox</h2>
+		<mark>1 unit = 1</mark>
+		<div>
+			<img src="./assets/images/unit1.png" width="800px" />
+		</div>
+	</section>
+
+	<section class="slide">
+		<h2>The viewBox</h2>
+		<mark>1 unit = 0.5</mark>
+		<div>
+			<img src="./assets/images/unit05.png" width="800px" />
+		</div>
+	</section>
+
+	<section class="slide">
+		<h2>The viewBox</h2>
+		<mark>1 unit = 2</mark>
+		<div>
+			<img src="./assets/images/unit2.png" width="800px" />
+		</div>
+	</section>
+
+	<section class="slide">
+		<h2>The preserveAspectRatio</h2>
+		<p>
+			Если пропорции ширины и высоты области просмотра и viewBox не совпадают, то артибут preserveAspectRatio указывает браузеру, как отображать рисунок.
+		</p>
+		<p>
+			Можно провести аналогию с <code>background-position</code> и <nobr><code>background-size</code></nobr>
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>The preserveAspectRatio</h2>
+		<code>preserveAspectRatio = defer? &lt;align> &lt;meetOrSlice>? </code>
+		<p>
+			<code>&lt;align></code> &mdash; состоит из двух частей и задаёт выравнивание viewBox в области просмотра.<br/>
+			<code>&lt;meetOrSlice></code> &mdash; указывает, как пропорции должны быть сохранены (необязательный).<br/>
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>The preserveAspectRatio</h2>
+		<code>preserveAspectRatio="xMaxYMax meet"</code>
+		<p>
+			Эти значения выравнивают нижний правый угол viewBox по нижнему правому углу области просмотра. meet сохраняет пропорции, масштабируя viewBox, чтобы уместиться в область просмотра насколько это возможно.
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>Системы координат SVG</h2>
+		<div class="demo-link" style="height: 40vh">
+			<a href="https://sarasoueidan.com/blog/svg-coordinate-systems/" target="_blank" rel="noopener">Understanding SVG Coordinate Systems</a>
+		</div>
+	</section>
+
+	<section class="slide">
+		<h2>SVG градиенты</h2>
+		<pre>
+			<code>&lt;linearGradient <mark>id="linear-gradient"</mark>></code>
+			<code class="mark">	&lt;stop offset="0%" stop-color="gold"/></code>
+			<code class="mark">	&lt;stop offset="100%" stop-color="yellowgreen"/></code>
+			<code>&lt;/linearGradient></code>
+			<code> </code>
+			<code>&lt;rect <mark>fill="url(#linear-gradient)"</mark> width="100" height="100"/></code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>SVG градиенты</h2>
+		<div class="demo-link">
+			<a class="link" href="https://korosteleva.github.io/svg-demo/gradient/gradient.html" target="_blank">DEMO</a>
+		</div>
 	</section>
 
 	<section class="slide">
@@ -396,8 +642,91 @@
 	</section>
 
 	<section class="slide">
-		<h2>SVG в рассылках!</h2>
+		<h2>SVG в рассылках</h2>
+		<div style="text-align: center;padding-top: 50px;">
+			<img src="./assets/images/svg-in-email.gif"/>
+		</div>
+	</section>
+
+	<section class="slide">
+		<h2>SVG в рассылках</h2>
+		<p>Почтовые клиенты и движки рендеринга</p>
+		<table>
+			<tr>
+				<th scope="col">Email client</th>
+				<th>Rendering engine</th>
+			</tr>
+			<tr>
+				<th scope="row">
+					Apple Mail, Android Mail<br>
+					Outlook for Mac, iOS Mail
+				</th>
+				<td>WebKit</td>
+			</tr>
+			<tr>
+				<th scope="row">
+					Outlook 2000/02/03
+				</th>
+				<td>Internet Explorer</td>
+			</tr>
+			<tr>
+				<th scope="row">
+					Outlook 2007/10/13
+				</th>
+				<td>Microsoft Word</td>
+			</tr>
+		</table>
+	</section>
+
+	<section class="slide">
+		<h2>SVG в рассылках</h2>
 		// todo
+		<p>Поддержка браузерами</p>
+		<table>
+			<tr>
+				<th scope="col">Locavore</th>
+				<th>Umami</th>
+				<th>Helvetica</th>
+				<th>Vegan</th>
+			</tr>
+			<tr>
+				<th scope="row">Fingerstache</th>
+				<td>Kale</td>
+				<td>Chips</td>
+				<td>Keytar</td>
+			</tr>
+			<tr>
+				<th scope="row">Sriracha</th>
+				<td>Gluten-free</td>
+				<td>Ennui</td>
+				<td>Keffiyeh</td>
+			</tr>
+			<tr>
+				<th scope="row">Thundercats</th>
+				<td>Jean</td>
+				<td>Shorts</td>
+				<td>Biodiesel</td>
+			</tr>
+			<tr>
+				<th scope="row">Terry</th>
+				<td>Richardson</td>
+				<td>Swag</td>
+				<td>Blog</td>
+			</tr>
+		</table>
+	</section>
+
+	<section class="slide">
+		<h2 style="text-align: center;">CSS/JS in SVG. Немного практики</h2>
+
+		<div class="cover-images">
+			<svg class="cover-image">
+				<use xlink:href="./assets/common.svg#happy" />
+			</svg>
+			<svg class="cover-image">
+				<use xlink:href="./assets/common.svg#surprise" />
+			</svg>
+		</div>
 	</section>
 
 	<section class="slide">
@@ -523,10 +852,18 @@
 
 	<section class="slide">
 		<h2>Лоадеры</h2>
+		<div class="demo-link">
+			<a class="link" href="https://korosteleva.github.io/svg-demo/loaders/loaders.html" target="_blank">DEMO</a>
+			<div>Designed by <a href="http://samherbert.net/" target="_blank" rel="noopener">Sam Herbert</a></div>
+		</div>
+
 	</section>
 
 	<section class="slide">
 		<h2>Проблемы svg</h2>
+		<ul>
+			<li>События мыши по <code>hover</code> или </li>
+		</ul>
 	</section>
 
 	<section class="slide">
@@ -587,6 +924,9 @@
 			</li>
 			<li>
 				<a href="https://css-tricks.com/mega-list-svg-information/" target="_blank" rel="noopener">Css tricks: mega list svg</a>
+			</li>
+			<li>
+				<a href="https://sarasoueidan.com/blog/svg-coordinate-systems/" target="_blank" rel="noopener">Understanding SVG Coordinate Systems and Transformations</a>
 			</li>
 		</ul>
 	</section>
